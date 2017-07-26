@@ -1,0 +1,143 @@
+body{
+  background: rgb(255,64,129);
+  /*background: #ffd1dc;*/
+  transition: all ease 3s;
+  overflow-x: hidden;
+}
+
+body p{
+  font-size: 18px;
+}
+
+a, a:visited{
+  text-decoration: none;
+  color: indigo;
+  transition: all ease 3s;
+}
+a:hover{
+  color: #EFEFEF;
+}
+button#demo-menu-lower-left{
+  color: rgb(255,64,129);
+  border-color: rgb(255,64,129);
+  transition: all ease 1s;
+  /*display: none;*/
+  border: indigo 3px solid;
+  margin: 10px;
+  right: -12%;
+  position: fixed;
+}
+button#demo-menu-lower-left.displayed{
+  /*display: inline-block;*/
+  color: black;
+  z-index: 999;
+  /*float: right;*/
+  right: 10%;
+  top: 2.5%;
+}
+button.emaillink.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.mdl-button--accent{
+  background: indigo;
+  position: fixed;
+  bottom: 1%;
+  right: 2.5%;
+  z-index: 1000;
+}
+.menu{
+  text-align: center;
+  width: 70%;
+  display: block;
+  height: 900px;
+  padding-top: 40px;
+  /*background: indigo;*/
+  background: #EFEFEF;
+  padding-bottom: 600px;
+  transition: all 1.5s ease;
+  z-index: 1000;
+}
+.menu button{
+  width: 80%;
+  border: indigo 1px solid;
+  margin: 10px;
+}
+
+.menu.activated{
+  width: 0;
+}
+.menu button.activated{
+  display: none;
+}
+.jerry h1, .experience h1, .projects h1, .resume h1{
+  display: none;
+}
+.jerry h5, .experience h5, .projects h5, .resume h5{
+  display: none;
+}
+.jerry p, .experience p, .projects p, .resume p{
+  display: none;
+}
+.jerry ul, .experience ul, .projects ul, .resume ul{
+  display: none;
+}
+.jerry li, .experience li, .projects li, .resume li{
+  display: none;
+}
+.jerry, .experience, .projects, .resume{
+  position: fixed;
+  top: 0;
+  text-align: center;
+  padding: 0 20px;
+  color: indigo;
+  display: block;
+  width: 0;
+  transition: all ease 1s;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.jerry.displayed, .experience.displayed, .projects.displayed, .resume.displayed{
+  color: white;
+  display: inline-block;
+  width: 90%;
+  height: 100%;
+  padding-bottom: 20%;
+  overflow-y: scroll;
+}
+
+.jerry::-webkit-scrollbar, .experience::-webkit-scrollbar, .projects::-webkit-scrollbar, .resume::-webkit-scrollbar{
+  background: rgb(255,64,129);
+}
+
+.jerry.displayed h1, .experience.displayed h1, .projects.displayed h1, .resume.displayed h1{
+  display: block;
+  color: indigo;
+}
+
+.jerry.displayed h5, .experience.displayed h5, .projects.displayed h5, .resume.displayed h5{
+  display: block;
+  color: indigo;
+}
+
+.jerry.displayed p, .experience.displayed p, .projects.displayed p, .resume.displayed p{
+  display: block;
+}
+.jerry.displayed ul, .experience.displayed ul, .projects.displayed ul, .resume.displayed ul{
+  display: block;
+}
+.jerry.displayed li, .experience.displayed li, .projects.displayed li, .resume.displayed li{
+  display: block;
+}
+.resume table, .resume tr, .resume td{
+  display: none;
+}
+.resume.displayed table, .resume.displayed tr, .resume.displayed td{
+  display: inline;
+}
+@media screen and (min-width: 600px)  {
+  .menu{
+    width: 30%;
+  }
+  .jerry.displayed, .experience.displayed, .projects.displayed, .resume.displayed{
+    width: 45%;
+    margin-left: 25%;
+  }
+}
